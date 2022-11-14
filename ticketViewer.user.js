@@ -3,7 +3,7 @@
 // @version            0.1
 // @author 	Nikolai Smetannikov
 
-// @updateURL    https://github.com/
+// @updateURL    https://raw.githubusercontent.com/NickSmet/TicketViewer/master/ticketViewer.user.js
 
 // @include     https://support.parallels.com/Parallels/Pages/Ticket/Display.html?id=*
 // @include     https://mysupport.corel.com/Pages/Ticket/Display.html?id=*
@@ -12,8 +12,8 @@
 
 // @resource    bootstrapCSS https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css?5
 
-// @require    file:////Users/pd-team/Visual Studio Code Projects/TicketViewer/ticketViewer.js
-// @resource   ticketViewerCSS  file:////Users/pd-team/Visual Studio Code Projects/TicketViewer/ticketViewer.css
+// @require    https://raw.githubusercontent.com/NickSmet/TicketViewer/master/ticketViewer.js
+// @resource   ticketViewerCSS  https://raw.githubusercontent.com/NickSmet/TicketViewer/master/ticketViewer.css
 
 
 // @run-at       document-end
