@@ -11,7 +11,7 @@ let item_target = '#' + item_id
 let collapsible =
 `<div>
 <button type="button" id=${button_id} class="btn btn-primary btn-xs" aria-pressed="true" data-toggle="collapse" data-target=${item_target}>➤</button>
-<a style="text-decoration: none; text-decoration: none; background-color: unset !important;">${item_name}</a>\
+<a style="text-decoration: none; font-size: 15px; text-decoration: none; background-color: unset !important;">${item_name}</a>\
 <div id=${item_id} style="white-space: pre-wrap;" class="collapse">
 ${item_content}</div>`
 
@@ -81,6 +81,8 @@ $(element)
     }
   )
 
+  if(message.match(/=======================================/) && message.match(/Steps to reproduce the issue/)){type = 'escalation'}
+
   let authorPrefix
   switch(type) {
     case 'in':
@@ -97,6 +99,10 @@ $(element)
       case 'comment':
         authorPrefix = '💬'
         break;
+
+      case 'escalation':
+      authorPrefix = '🔺'
+      break;
   
     default:
       // code block
