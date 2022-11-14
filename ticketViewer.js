@@ -12,7 +12,7 @@ let collapsible =
 `<div>
 <button type="button" id=${button_id} class="btn btn-primary btn-xs" aria-pressed="true" data-toggle="collapse" data-target=${item_target}>➤</button>
 <a style="text-decoration: none; text-decoration: none; background-color: unset !important;">${item_name}</a>\
-<div id=${item_id} style="white-space: pre;" class="collapse">
+<div id=${item_id} style="white-space: pre-wrap;" class="collapse">
 ${item_content}</div>`
 
 return collapsible
@@ -107,7 +107,7 @@ $(element)
 
   const bullet = authorPrefix+author+'\n '+date;
 
-  $("body > div.container-fluid > div:nth-child(1)").append($(buildTransactionCollapsible(bullet,message, id)))
+  $("#summaryContainer").append($(buildTransactionCollapsible(bullet,message, id)))
   
 }
 
@@ -139,7 +139,13 @@ function main(){
 }
 
 
+$("body > div.container-fluid > div:nth-child(2)").prepend($('<button class="btn btn-info" id="SUMMARY" >SUMMARY</button>'))
+$("body > div.container-fluid > div:nth-child(2)").prepend($('<span id="summaryContainer" ></span>'))
 
-setTimeout(main, 7000);
+$("#SUMMARY").click(function(){
+  $("#SUMMARY").remove()
+  main()
+
+});
 
 
