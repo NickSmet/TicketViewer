@@ -103,6 +103,10 @@ $(element)
       case 'escalation':
       authorPrefix = '🔺'
       break;
+
+      case 'moderation':
+        authorPrefix = '❓'
+        break;
   
     default:
       // code block
@@ -128,6 +132,9 @@ function cycleMessages(){
           break;
         case 'txn-inbound':
           parseMessage(this, index, 'in')
+          break;
+        case 'info':
+            parseMessage(this, index, 'moderation')
           break;
       
         default:
