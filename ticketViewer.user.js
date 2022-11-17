@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Ticket Viewer
-// @version            0.3
+// @version            0.4
 // @author 	Nikolai Smetannikov
 
 // @updateURL    https://raw.githubusercontent.com/NickSmet/TicketViewer/master/ticketViewer.user.js

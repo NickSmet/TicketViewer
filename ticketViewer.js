@@ -70,10 +70,16 @@ $(element)
           
         )
       }
+
+      const quote_regex = /Expand quote|\- Original Message \-|\-Original Message\-/ //after this one, we want to stop parsing
       
       if(line.match(/Transcript of your chat with Visitor/)){type = 'chat'}
+      if(line.match(quote_regex)){
+        return false
+
+      }
       if(line.match(/\s+Subject\:/)){return}
-      if(line.match(/Expand quote/)){return false}
+     
       
       if(line.length>2)
       {message = message+line+'\n'}
